@@ -1,0 +1,25 @@
+
+{
+    "token":
+    {
+        "secret": "event_ticketing.com"
+    },
+    "webServer":
+    {
+        "port": 8080,
+        "host": "localhost",
+        "url": "http://localhost:8080"
+    },
+    "email":
+    {
+        "service": "smtp.gmail.com",
+        "port":587,
+        "auth":
+        {
+           
+            "user": "test.dev788@gmail.com",
+            "password": "admin@1234"
+        },
+        "from": "Event Ticketing"
+    }
+}

@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ticket</title>
+    
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+<style>
+body, p, h1, h2, h3, h4, h5, h6, ul{font-family: 'Poppins', sans-serif;margin:0px; padding: 0px;}  
+.eventTicket {
+    width: 500px;
+}
+.eventHeading h2 {
+    font-size: 23px;
+    font-weight: 600;
+    color: #f13300;
+}
+.eventPoster img {
+    width: 100%;
+}
+.eventSchedule h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23px;
+}
+.eventSchedule span {
+    font-size: 17px;
+    font-style: italic;
+    color: #2e2e2e;
+    display: block;
+}
+.bookingIDTxt {
+    background: #ff3b06;
+    padding: 10px 70px;
+    display: inline-block;
+    color: #fff !important;
+    font-size: 32px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    margin-top: 5px;
+}
+.eventTicket table {
+    min-width: 100%;
+    max-width: 100%;
+    float: left;
+    clear: both;
+}
+@media(max-width:500px){
+.eventTicket {
+    width: 100%;
+}
+.eventSchedule span {
+    font-size: 13px;
+}
+.eventSchedule h3 {
+    font-size: 14px;
+    line-height: 17px;
+}
+.bookingIDTxt {
+    padding: 10px 70px;
+    font-size: 18px;
+}
+}
+</style>
+</head>
+
+<body>
+<div class="eventTicket">
+    <table class="eventTicket" cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <td>
+                    <table class="header" cellpadding="0" cellspacing="0" style="background: #000000; width: 100%; padding: 15px 15px;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <div class="emailLogo">
+                                                    <a href="https://imgbb.com/">
+                                                        <img src="https://i.ibb.co/Stmq6fH/email-Logo.png" alt="email-Logo" border="0" style="float: left;">
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>   
+                                    </table>
+                                </td>
+                                <td>
+                                    <table cellpadding="0" cellspacing="0" style="width: 100%; text-align: right;color: #fff;">
+                                        <tr>
+                                            <td>
+                                                <div class="topEventID">
+                                                    <p>ID - <%= booking_id %></p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="eventImage" cellpadding="0" cellspacing="0" style="width: 100%;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="eventPoster">
+                                        <img src="https://i.ibb.co/qBH609Z/eventImg.jpg" alt="eventImg" border="0" style="float: left;">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="eventTitle" cellpadding="0" cellspacing="0" style="width: 100%;padding: 15px; border-bottom: 1px solid #e2e2e2; background: #f8f8f8;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="eventHeading">
+                                        <h2><%= event_name %></h2>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="dateTime" cellpadding="0" cellspacing="0" style="background: #f8f8f8; width: 100%; padding: 15px 15px;border-bottom: 1px solid #e2e2e2;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                                        <tr>
+                                            <td>
+                                                <div class="eventSchedule">
+                                                    <span>Date</span>
+                                                    <h3><%= start_date %></h3>
+                                                </div>
+                                            </td>
+                                        </tr>   
+                                    </table>
+                                </td>
+                                <td>
+                                    <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                                        <tr>
+                                            <td>
+                                                <div class="eventSchedule">
+                                                    <span>Time</span>
+                                                    <h3><%= start_time %> - <%= end_time %></h3>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="Vanue" cellpadding="0" cellspacing="0" style="background: #f8f8f8; width: 100%; padding: 15px 15px;border-bottom: 1px solid #e2e2e2;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="eventSchedule">
+                                        <span>Vanue</span>
+                                        <h3><%=venue_name %></h3>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="address" cellpadding="0" cellspacing="0" style="background: #f8f8f8; width: 100%; padding: 15px 15px;border-bottom: 1px solid #e2e2e2;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="eventSchedule">
+                                        <span>Address</span>
+                                        <h3><%= venue_name %>,<%= address %>,<%= city %>,<%= state %>,<%= zipcode %></h3>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="bookingID" cellpadding="0" cellspacing="0" style="background: #f8f8f8; width: 100%; padding: 25px 15px;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="eventSchedule" style="text-align: center;">
+                                        <span>Booking ID</span>
+                                        <a href="#" class="bookingIDTxt"><%= booking_id %></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="bookingScanCode" cellpadding="0" cellspacing="0" style="width: 100%; padding: 25px 15px 10px">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="scanCode" style="text-align: center;">
+                                        <img src='http://52.14.185.147:8080/qrImage/<%= qrimage %>' alt="qrCode" border="0" >
+                                        <!-- <img src="https://i.ibb.co/4RQfJsy/qrCode.png" alt="qrCode" border="0"> -->
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="ticketType" cellpadding="0" cellspacing="0" style="width: 100%; padding: 10px 15px 20px;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="scanCode">
+                                        <table cellpadding="0" cellspacing="0" style="width: 100%;">                                            
+                                            <thead style="background: #3a3a3a;">
+                                                <% if(typeof(ticket) !== "undefined"){ 
+                                                    JSON.parse(ticket).forEach(ticket => { %>
+                                                <tr>
+                                                    <th style="text-align: left;color: #fff;font-size: 14px;font-weight: 500;padding: 9px 14px;">Package</th>
+                                                    <th style="text-align: left;color: #fff;font-size: 14px;font-weight: 500;padding: 9px 14px;">Type</th>
+                                                    <th style="text-align: left;color: #fff;font-size: 14px;font-weight: 500;padding: 9px 14px;">Price</th>
+                                                    <th style="text-align: right;color: #fff;font-size: 14px;font-weight: 500;padding: 9px 14px;"> Quantity</th>
+                                                    <th style="text-align: right;color: #fff;font-size: 14px;font-weight: 500;padding: 9px 14px;"> Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <tr style="background: #f7f7f7">
+                                                    <td style="color: #1b1b1b;font-size: 14px;font-weight: 500;padding: 9px 14px;"><%= ticket.package %></td>
+                                                    <td style="color: #1b1b1b;font-size: 14px;font-weight: 500;padding: 9px 14px;"><%= ticket.type %></td>
+                                                    <td style="text-align: right;color: #1b1b1b;font-size: 14px;font-weight: 500;padding: 9px 14px;">$<%= ticket.price %></td>
+                                                    <td style="text-align: right;color: #1b1b1b;font-size: 14px;font-weight: 500;padding: 9px 14px;"><%= ticket.count %></td>
+                                                    <td style="text-align: right;color: #1b1b1b;font-size: 14px;font-weight: 500;padding: 9px 14px;">$<%= ticket.total %></td>
+                                                </tr>
+                                                <%  })} %>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr style="background: #dbdbdb">
+                                                    <td style="color: #1b1b1b;font-size: 14px;padding: 9px 14px;">Service Tax</td>
+                                                    <td style="color: #1b1b1b;font-size: 14px;padding: 9px 14px;"></td>
+                                                    <td style="color: #1b1b1b;font-size: 14px;padding: 9px 14px;"></td>
+                                                    <td style="color: #1b1b1b;font-size: 14px;padding: 9px 14px;"></td>
+                                                    <td style="text-align: right;color: #1b1b1b;font-size: 14px;padding: 9px 14px;"><%= service_tax %> % </td>
+                                                </tr>
+                                                <tr style="background: #dbdbdb">
+                                                    <td style="color: #1b1b1b;font-size: 14px;padding: 9px 14px;">Total Quantity</td>
+                                                    <td style="color: #1b1b1b;font-size: 14px;padding: 9px 14px;"></td>
+                                                    <td style="color: #1b1b1b;font-size: 14px;padding: 9px 14px;"></td>
+                                                    <td style="color: #1b1b1b;font-size: 14px;padding: 9px 14px;"></td>
+                                                    <td style="text-align: right;color: #1b1b1b;font-size: 14px;padding: 9px 14px;"><%= quantity %> </td>
+                                                </tr>
+                                                <tr style="background: #dbdbdb">
+                                                    <td style="color: #1b1b1b;font-size: 14px;padding: 9px 14px;">Total Price</td>
+                                                    <td style="color: #1b1b1b;font-size: 14px;padding: 9px 14px;"></td>
+                                                    <td style="color: #1b1b1b;font-size: 14px;padding: 9px 14px;"></td>
+                                                    <td style="color: #1b1b1b;font-size: 14px;padding: 9px 14px;"></td>
+                                                    <td style="text-align: right;color: #1b1b1b;font-size: 14px;padding: 9px 14px;">$<%= ticket_price %></td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>   
+</div>
+</body>
+
+</html>
